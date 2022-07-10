@@ -1,0 +1,32 @@
+<%- include ("template/cabecera", {tituloWeb: 'Página de inicio Proveedor'}) %> 
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <th scope="col">ID</th>
+            <th scope="col">NOMBRE</th>
+            <th scope="col">DIRECCION</th>
+            <th scope="col">FONO</th>
+            <th scope="col">EMAIL</th>
+            <th scope="col">ACCION</th>
+        </thead>
+        <tbody>
+            <h2>Proveedores</h2>
+            <div>
+                <% if (arrayProveedores.length>0) { %>
+                    <% arrayProveedores.forEach( proveedor => { %>
+                        <tr>
+                            <th>Id: <%= proveedor.id %> </th><br>
+                            <th>Nombre: <%= proveedor.nombre %>  </th> <br>
+                            <th>Apellido: <%= proveedor.direccion %> </th><br>
+                            <th>Apellido: <%= proveedor.fono %> </th><br>
+                            <th>Apellido: <%= proveedor.email %> </th><br>
+                        </tr>
+                    <% }) %> 
+                <% } %>
+            </div>
+        </tbody>
+    </table>
+</div>
+
+<%- include("template/footer") %> 
